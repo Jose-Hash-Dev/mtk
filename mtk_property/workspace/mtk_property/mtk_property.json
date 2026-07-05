@@ -1,12 +1,7 @@
 {
- "app": "tensor_core",
- "charts": [
-  {
-   "chart_name": "Odenmemis Pullar",
-   "label": "Odenmemis"
-  }
- ],
- "content": "[{\"id\":\"8ITwUJoWdY\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>MTK Property Management</b></span>\",\"col\":12}},{\"id\":\"Bn4vOpxjZW\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Odenmemis\",\"col\":12}}]",
+ "app": "mtk_property",
+ "charts": [],
+ "content": "[{\"id\":\"header1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>MTK Property Management</b></span>\",\"col\":12}},{\"id\":\"header2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h6\\\"><b>Quick Access</b></span>\",\"col\":12}},{\"id\":\"shortcut1\",\"type\":\"shortcut\",\"data\":{\"label\":\"Buildings\",\"link_to\":\"MTK Building\",\"type\":\"DocType\",\"color\":\"Blue\",\"icon\":\"lucide/building-2\",\"col\":3}},{\"id\":\"shortcut2\",\"type\":\"shortcut\",\"data\":{\"label\":\"Apartments\",\"link_to\":\"MTK Apartment\",\"type\":\"DocType\",\"color\":\"Green\",\"icon\":\"lucide/home\",\"col\":3}},{\"id\":\"shortcut3\",\"type\":\"shortcut\",\"data\":{\"label\":\"Residents\",\"link_to\":\"MTK Resident\",\"type\":\"DocType\",\"color\":\"Purple\",\"icon\":\"lucide/users\",\"col\":3}},{\"id\":\"shortcut4\",\"type\":\"shortcut\",\"data\":{\"label\":\"Bills\",\"link_to\":\"MTK Monthly Bill\",\"type\":\"DocType\",\"color\":\"Orange\",\"icon\":\"lucide/file-text\",\"col\":3}},{\"id\":\"shortcut5\",\"type\":\"shortcut\",\"data\":{\"label\":\"Payments\",\"link_to\":\"MTK Payment\",\"type\":\"DocType\",\"color\":\"Green\",\"icon\":\"lucide/credit-card\",\"col\":3}},{\"id\":\"shortcut6\",\"type\":\"shortcut\",\"data\":{\"label\":\"Maintenance\",\"link_to\":\"MTK Maintenance Request\",\"type\":\"DocType\",\"color\":\"Red\",\"icon\":\"lucide/wrench\",\"col\":3}},{\"id\":\"shortcut7\",\"type\":\"shortcut\",\"data\":{\"label\":\"Expenses\",\"link_to\":\"MTK Expense\",\"type\":\"DocType\",\"color\":\"Yellow\",\"icon\":\"lucide/wallet\",\"col\":3}}]",
  "creation": "2026-07-04 12:25:24.043384",
  "custom_blocks": [],
  "docstatus": 0,
@@ -19,9 +14,8 @@
  "label": "MTK Property",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-07-04 13:11:41.142647",
+ "modified": "2026-07-05 14:00:00.000000",
  "modified_by": "Administrator",
- "module": "MTK Property",
  "name": "MTK Property",
  "number_cards": [],
  "owner": "Administrator",

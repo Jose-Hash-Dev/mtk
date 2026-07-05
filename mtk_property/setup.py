@@ -6,16 +6,14 @@ import frappe
 # ─────────────────────────────────────────────────────────────────────
 
 def after_install():
-	"""Set up MTK Property roles and workspace when app is installed."""
+	"""Set up MTK Property roles when app is installed."""
 	setup_mtk_roles()
-	setup_mtk_workspace()
 
 
 def after_migrate():
 	"""Sync MTK Property data after database migrations."""
 	if frappe.conf.get("mtk_property_enabled", True):
 		setup_mtk_roles()
-		setup_mtk_workspace()
 
 
 # ─────────────────────────────────────────────────────────────────────
