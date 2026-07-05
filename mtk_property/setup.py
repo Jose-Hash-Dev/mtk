@@ -211,39 +211,6 @@ MTK_WORKSPACE_CONTENT = [
 			"col": 12,
 		},
 	},
-	# ── KPI number cards ─────────────────────────────────────────────
-	{
-		"type": "number_card",
-		"data": {"number_card_name": "Total Apartments", "col": 3},
-	},
-	{
-		"type": "number_card",
-		"data": {"number_card_name": "Active Residents", "col": 3},
-	},
-	{
-		"type": "number_card",
-		"data": {"number_card_name": "Unpaid Bills", "col": 3},
-	},
-	{
-		"type": "number_card",
-		"data": {"number_card_name": "Total Payments", "col": 3},
-	},
-	# ── Charts ───────────────────────────────────────────────────────
-	{
-		"type": "header",
-		"data": {
-			"text": "<span class=\"h6\"><b>Trends</b></span>",
-			"col": 12,
-		},
-	},
-	{
-		"type": "chart",
-		"data": {"chart_name": "MTK Bills by Status", "col": 6},
-	},
-	{
-		"type": "chart",
-		"data": {"chart_name": "MTK Residents Over Time", "col": 6},
-	},
 	# ── Quick-access shortcuts ────────────────────────────────────────
 	{
 		"type": "header",
