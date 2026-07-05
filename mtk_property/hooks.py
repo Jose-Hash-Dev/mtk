@@ -14,7 +14,6 @@ app_license = "MIT"
 add_to_apps_screen = [
 	{
 		"name": "mtk_property",
-		"logo": "/assets/mtk_property/images/mtk_icon.png",
 		"title": "MTK Property",
 		"route": "/app/mtk-property",
 		"icon": "lucide/building-2",
@@ -51,12 +50,6 @@ scheduler_events = {
 # ─────────────────────────────────────────────────────────────────────
 
 fixtures = [
-	{
-		"doctype": "Workspace",
-		"filters": [
-			["name", "=", "MTK Property"],
-		],
-	},
 	{
 		"doctype": "Number Card",
 		"filters": [
