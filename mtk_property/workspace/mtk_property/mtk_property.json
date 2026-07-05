@@ -1,7 +1,7 @@
 {
  "app": "mtk_property",
  "charts": [],
- "content": "[{\"id\":\"header1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>MTK Property Management</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"header1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>MTK Property Management</b></span>\",\"col\":12}},{\"id\":\"header2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h6\\\"><b>Quick Access</b></span>\",\"col\":12}},{\"id\":\"sc_building\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Building\",\"col\":3,\"color\":\"Blue\",\"format\":\"{} Building(s)\",\"icon\":\"lucide/building-2\",\"label\":\"Buildings\",\"link_to\":\"MTK Building\",\"type\":\"DocType\"}},{\"id\":\"sc_apartment\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Apartment\",\"col\":3,\"color\":\"Green\",\"format\":\"{} Apartment(s)\",\"icon\":\"lucide/home\",\"label\":\"Apartments\",\"link_to\":\"MTK Apartment\",\"type\":\"DocType\"}},{\"id\":\"sc_resident\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Resident\",\"col\":3,\"color\":\"Purple\",\"format\":\"{} Resident(s)\",\"icon\":\"lucide/users\",\"label\":\"Residents\",\"link_to\":\"MTK Resident\",\"type\":\"DocType\"}},{\"id\":\"sc_bill\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Monthly Bill\",\"col\":3,\"color\":\"Orange\",\"format\":\"{} Bill(s)\",\"icon\":\"lucide/file-text\",\"label\":\"Bills\",\"link_to\":\"MTK Monthly Bill\",\"type\":\"DocType\"}},{\"id\":\"sc_payment\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Payment\",\"col\":3,\"color\":\"Green\",\"format\":\"{} Payment(s)\",\"icon\":\"lucide/credit-card\",\"label\":\"Payments\",\"link_to\":\"MTK Payment\",\"type\":\"DocType\"}},{\"id\":\"sc_maintenance\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Maintenance Request\",\"col\":3,\"color\":\"Red\",\"format\":\"{} Request(s)\",\"icon\":\"lucide/wrench\",\"label\":\"Maintenance\",\"link_to\":\"MTK Maintenance Request\",\"type\":\"DocType\"}},{\"id\":\"sc_expense\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"MTK Expense\",\"col\":3,\"color\":\"Yellow\",\"format\":\"{} Expense(s)\",\"icon\":\"lucide/wallet\",\"label\":\"Expenses\",\"link_to\":\"MTK Expense\",\"type\":\"DocType\"}}]",
  "creation": "2026-07-04 12:25:24.043384",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,6 +11,7 @@
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
+ "is_standard": 1,
  "label": "MTK Property",
  "link_type": "DocType",
  "links": [
@@ -50,7 +51,7 @@
    "type": "DocType"
   }
  ],
- "modified": "2026-07-05 14:00:00.000000",
+ "modified": "2026-07-05 16:00:00.000000",
  "modified_by": "Administrator",
  "name": "MTK Property",
  "number_cards": [],
@@ -58,8 +59,65 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 0.0,
- "shortcuts": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "icon": "lucide/building-2",
+   "label": "Buildings",
+   "link_to": "MTK Building",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "icon": "lucide/home",
+   "label": "Apartments",
+   "link_to": "MTK Apartment",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "icon": "lucide/users",
+   "label": "Residents",
+   "link_to": "MTK Resident",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "icon": "lucide/file-text",
+   "label": "Bills",
+   "link_to": "MTK Monthly Bill",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "icon": "lucide/credit-card",
+   "label": "Payments",
+   "link_to": "MTK Payment",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "icon": "lucide/wrench",
+   "label": "Maintenance",
+   "link_to": "MTK Maintenance Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "icon": "lucide/wallet",
+   "label": "Expenses",
+   "link_to": "MTK Expense",
+   "type": "DocType"
+  }
+ ],
  "title": "MTK Property",
  "type": "Workspace"
 }
