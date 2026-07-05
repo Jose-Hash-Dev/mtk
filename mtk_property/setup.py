@@ -8,8 +8,6 @@ import frappe
 def after_install():
 	"""Set up MTK Property roles and workspace when app is installed."""
 	setup_mtk_roles()
-	setup_mtk_number_cards()
-	setup_mtk_dashboard_charts()
 	setup_mtk_workspace()
 
 
@@ -17,8 +15,6 @@ def after_migrate():
 	"""Sync MTK Property data after database migrations."""
 	if frappe.conf.get("mtk_property_enabled", True):
 		setup_mtk_roles()
-		setup_mtk_number_cards()
-		setup_mtk_dashboard_charts()
 		setup_mtk_workspace()
 
 
@@ -90,7 +86,17 @@ MTK_NUMBER_CARDS = [
 
 def setup_mtk_number_cards():
 	"""Create/update the four KPI Number Cards shown at the top of the MTK workspace."""
+	# Check if module and doctypes exist before creating cards
+	if not frappe.db.exists("Module", "MTK Property"):
+		print("[MTK] Skipping Number Cards — Module 'MTK Property' not found yet")
+		return
+	
 	for card_def in MTK_NUMBER_CARDS:
+		# Check if DocType exists
+		if not frappe.db.exists("DocType", card_def["document_type"]):
+			print(f"[MTK] Skipping card '{card_def['label']}' — DocType '{card_def['document_type']}' not found")
+			continue
+		
 		# Frappe auto-generates the name from label; use label to find existing records
 		existing_name = frappe.db.get_value(
 			"Number Card",
