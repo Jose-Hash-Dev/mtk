@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "autoname": "MTK-BILL-.YYYY.-.####",
+ "creation": "2026-07-04 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "apartment",
+  "building",
+  "column_break_1",
+  "billing_month",
+  "billing_year",
+  "status",
+  "section_break_billing",
+  "area_sqm",
+  "rate_per_sqm",
+  "amount",
+  "due_date",
+  "column_break_billing_2",
+  "paid_amount",
+  "payment_date",
+  "section_break_resident",
+  "resident_name",
+  "resident_phone",
+  "column_break_resident_2",
+  "notes"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "apartment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Apartment",
+   "options": "MTK Apartment",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "apartment.building",
+   "fetch_if_empty": 0,
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "in_standard_filter": 1,
+   "label": "Building",
+   "options": "MTK Building",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "billing_month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Billing Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billing_year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Billing Year",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSent\nPaid\nOverdue"
+  },
+  {
+   "fieldname": "section_break_billing",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fetch_from": "apartment.area_sqm",
+   "fetch_if_empty": 0,
+   "fieldname": "area_sqm",
+   "fieldtype": "Float",
+   "label": "Area (m\u00b2)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_per_sqm",
+   "fieldtype": "Currency",
+   "label": "Rate per m\u00b2 (AZN)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount (AZN)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "column_break_billing_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount (AZN)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_resident",
+   "fieldtype": "Section Break",
+   "label": "Resident"
+  },
+  {
+   "fieldname": "resident_name",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "Resident Name"
+  },
+  {
+   "fieldname": "resident_phone",
+   "fieldtype": "Data",
+   "label": "Resident Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_resident_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [
+  {
+   "group": "Payments",
+   "link_doctype": "MTK Payment",
+   "link_fieldname": "bill"
+  }
+ ],
+ "modified": "2026-07-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MTK Property",
+ "name": "MTK Monthly Bill",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MTK Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MTK Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Red",
+   "title": "Overdue"
+  },
+  {
+   "color": "Blue",
+   "title": "Sent"
+  },
+  {
+   "color": "Gray",
+   "title": "Draft"
+  }
+ ],
+ "title_field": "title",
+ "track_changes": 1
+}
