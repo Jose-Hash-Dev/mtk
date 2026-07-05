@@ -112,8 +112,8 @@ MTK_NUMBER_CARDS = [
 def setup_mtk_number_cards():
 	"""Create/update the four KPI Number Cards shown at the top of the MTK workspace."""
 	# Check if module and doctypes exist before creating cards
-	if not frappe.db.exists("Module", "MTK Property"):
-		print("[MTK] Skipping Number Cards — Module 'MTK Property' not found yet")
+	if not frappe.db.exists("Module Def", "MTK Property"):
+		print("[MTK] Skipping Number Cards — Module Def 'MTK Property' not found yet")
 		return
 	
 	for card_def in MTK_NUMBER_CARDS:
