@@ -1,2 +1,4 @@
-// MTK Property App
-console.log('MTK Property App Loaded');
+/* ============================================================
+   MTK Property — Property Management System
+   Runs on every Desk page load (app_include_js).
+   ============================================================ */

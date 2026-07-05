@@ -1,32 +1,51 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
 [project]
 name = "mtk_property"
-authors = [{name = "Yusif", email = "yusif.hashimov@outlook.com"}]
-description = "MTK Property Management - Apartment & Resident Management System"
-readme = "README.md"
-requires-python = ">=3.7"
-license = {text = "MIT"}
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Environment :: Web Environment",
-    "Framework :: Frappe",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3 :: Only",
-    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
-    "Topic :: System :: ERP",
+authors = [
+    { name = "Yusif", email = "yusif.hashimov@outlook.com"}
 ]
+description = "MTK Property Management - Apartment & Resident Management System"
+requires-python = ">=3.11"
+readme = "README.md"
 dynamic = ["version"]
 dependencies = [
-    "frappe",
-    "pypika @ git+https://github.com/frappe/pypika@2c50e6142b2d61d2d243e466fdd5dc03b3d918f2",
-    "gunicorn @ git+https://github.com/frappe/gunicorn@bb554053bb87218120d76ab6676af7015680e8b6"
+    # "frappe~=16.0.0" # Installed and managed by bench.
 ]
 
-[project.urls]
-"Homepage" = "https://github.com"
-"Bug Reports" = "https://github.com/issues"
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"
+
+# These apt dependencies will be installed from Ubuntu repositories when you host your app on Frappe Cloud
+[deploy.dependencies.apt]
+packages = []
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "I",
+    "UP",
+    "B",
+    "RUF",
+]
+ignore = [
+    "B017", # assertRaises(Exception) - should be more specific
+    "B018", # useless expression, not assigned to anything
+    "B023", # function doesn't bind loop variable - will have last iteration's value
+    "B904", # raise inside except without from
+    "E101", # indentation contains mixed spaces and tabs
+    "E402", # module level import not at top of file
+    "E501", # line too long
+    "E741", # ambiguous variable name
+    "F401", # "unused" imports
+    "F403", # can't detect undefined names from * import
+]
