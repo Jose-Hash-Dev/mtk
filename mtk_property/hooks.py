@@ -63,12 +63,6 @@ fixtures = [
 			["module", "=", "MTK Property"],
 		],
 	},
-	{
-		"doctype": "Dashboard Chart",
-		"filters": [
-			["module", "=", "MTK Property"],
-		],
-	},
 ]
 
 # ─────────────────────────────────────────────────────────────────────
